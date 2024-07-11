@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+          <span class="logo-icon">&#x1F3A7;</span> <!-- Headphone emoji outline -->
+          <span class="logo-text">VIBE</span>
+          <button id="logout" style="position: absolute; top: 10px; right: 10px;">Logout</button>
+        </div>
+      </header>
+<div class="container">
+  <div id="trending-songs-container">
+    <h3>Trending Songs</h3>
+    <ul id="trending-songs-list"></ul>
+</div>
+  <div class="player-container">
+   <!-- <h1>Music Player</h1>-->
+    <div class="control-panel">
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Search Song">
+            <div id="search-results"></div>
+        </div>
+      <select id="functions">
+        <!--<option value="add">Add New Song</option>-->
+        <option value="" disabled selected>Menu</option>
+        <option value="delete">Delete Song</option>
+        <option value="display">Display Playlist</option>
+        <option value="total">Total Songs</option>
+        <!--<option value="play">Play Song</option>-->
+        <option value="recent">Recently Played</option>
+        <option value="last">Last Played</option>
+        <option value="sort">Sort Playlist</option>
+      </select>
+    </div>
+    <div class="current-song">
+      <img id="current-song-img" src="/spotify-clone/images/0.jpeg" alt="Current Song">
+      <h2 id="current-song-name">No song playing</h2>
+      <audio id="audioElement" controls></audio>
+    </div>
+    <div class="controls">
+      <button id="prev">Previous</button>
+      <button id="next">Next</button>
+    </div>
+  </div>
+</div>
+  <script src="script.js"></script>
+</body>
+</html>
